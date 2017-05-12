@@ -1,4 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { fetchWeather } from '../actions/index';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -13,7 +17,8 @@ class SearchBar extends React.Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.term);
+    this.props.fetchWeather(this.state.term);
+    this.setState({ term: '' });
   }
 
   render() {
@@ -32,4 +37,9 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchWeather }, dispatch);
+}
+
+// mapDispatchToProps is the second argument hence null as placeholder for first argument
+export default connect(null, mapDispatchToProps)(SearchBar);

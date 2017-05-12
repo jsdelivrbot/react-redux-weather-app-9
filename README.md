@@ -1,25 +1,15 @@
-# ReduxSimpleStarter
+## React Redux Weather App
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+An intermediate tutorial app aimed at furthering React and Redux concepts and knowledge.
 
-### Getting Started
+The following `README.md` is to consolidate the key learning points for future reference.
 
-There are two methods for getting started with this repo.
+The tutorial can be found here[here](https://www.udemy.com/react-redux/)
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+### Key Learning Points
+Middleware
+- Functions that run in between actions and reducers.
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+Redux-Promise Middleware
+- Checks if action payload is a promise
+- If the payload contains a promise, Redux-Promise will stop the data flow, wait for the promise to resolve before creating a new action to be sent to reducers.
