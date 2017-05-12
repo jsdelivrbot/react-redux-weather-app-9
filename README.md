@@ -19,7 +19,7 @@ The tutorial can be found [here](https://www.udemy.com/react-redux/)
 #### Keeping State Immutable
 - Be mindful in avoiding state mutations
 - Never change the state directly
-- Always return a new object/state.
+- Always return a new object/state to the reducer.
 
 ```js
 // Returns a mutated state - Avoid!
