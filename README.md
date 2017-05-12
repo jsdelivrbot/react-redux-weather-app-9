@@ -17,3 +17,15 @@ Redux-Promise Middleware
 
 Keeping State Immutable
 - Be mindful in avoiding state mutations, always return a new object/state.
+
+```
+// Returns a mutated state
+state.push(action.payload.data);
+
+// Returns a new object/state
+// Appends new data to end of array
+state.concat([ action.payload.data ]);
+
+// Appends new data to start of array
+[ action.payload.data, ...state ];
+```
