@@ -18,7 +18,7 @@ Redux-Promise Middleware
 Keeping State Immutable
 - Be mindful in avoiding state mutations, always return a new object/state.
 
-```
+```js
 // Returns a mutated state
 state.push(action.payload.data);
 
