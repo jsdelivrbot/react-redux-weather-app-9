@@ -8,9 +8,11 @@ td, th {
 }
 
 svg {
-  height: 100px;
+  height: 125px;
 }
 
+/* find the first td element and it's first div child */
 td:first-of-type, td:first-of-type > div {
   height: 150px;
   width: 200px;
+}

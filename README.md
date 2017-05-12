@@ -17,7 +17,9 @@ The tutorial can be found [here](https://www.udemy.com/react-redux/)
 - Minimises asynchronous code and keeps code clean (supposedly).
 
 #### Keeping State Immutable
-- Be mindful in avoiding state mutations, always return a new object/state.
+- Be mindful in avoiding state mutations
+- Never change the state directly
+- Always return a new object/state.
 
 ```js
 // Returns a mutated state - Avoid!
